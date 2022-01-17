@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="400"
+style="border:1px solid #d3d3d3;">
+</canvas>
+<br>
+	<h2>index</h2>
+    <a href="./01.html">1. projekts</a>
+    <a href="./02.html">2. projekts</a>
+    <a href="./03.html">3. projekts</a>
+    <a href="./04.html">4. projekts</a>
+    <a href="./05.html">5. projekts</a>
+    <a href="./06.html">6. projekts</a>
+    <a href="./07.html">7. projekts</a>
+    <a href="./08.html">8. projekts</a>
+    <a href="./09.html">9. projekts</a>
+    <a href="./10.html">10. projekts</a>
+    <a href="./11.html">11. projekts</a>
+    <a href="./12.html">12. projekts</a>
+    <a href="./13.html">13. projekts</a>
+    <a href="./14.html">14. projekts</a>
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+var x1 = Math.random() * 400;
+var y1 = Math.random() * 400;
+var r1 = Math.random() * 50; 
+
+var x2 = Math.random() * 400;
+var y2 = Math.random() * 400;
+var r2 = Math.random() * 50; 
+
+var x3 = Math.random() * 350;
+var y3 = Math.random() * 350;
+var r3 = Math.random() * 50; 
+
+var x4 = Math.random() * 350;
+var y4 = Math.random() * 350;
+var r4 = Math.random() * 50; 
+
+var x5 = Math.random() * 350;
+var y5 = Math.random() * 350;
+var r5 = Math.random() * 50; 
+
+//////////////////////////
+ctx.beginPath();
+ctx.arc(x1,y1,r1,0,2*Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(x2,y2,r2,0,2*Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(x3,y3,r3,0,2*Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(x4,y4,r4,0,2*Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(x5,y5,r5,0,2*Math.PI);
+ctx.stroke();
+//////////////////////////////
+ctx.moveTo(x1,y1);
+ctx.lineTo(x3,y3);
+ctx.stroke();
+
+ctx.moveTo(x3,y3);
+ctx.lineTo(x5,y5);
+ctx.stroke();
+
+ctx.moveTo(x5,y5);
+ctx.lineTo(x2,y2);
+ctx.stroke();
+
+ctx.moveTo(x2,y2);
+ctx.lineTo(x4,y4);
+ctx.stroke();
+
+ctx.moveTo(x4,y4);
+ctx.lineTo(x1,y1);
+ctx.stroke();
+
+
+</script> 
+
+</body>
+</html>

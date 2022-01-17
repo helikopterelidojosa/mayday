@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="400"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+<br>
+    <h2>index</h2>
+    <a href="./01.html">1. projekts</a>
+    <a href="./02.html">2. projekts</a>
+    <a href="./03.html">3. projekts</a>
+    <a href="./04.html">4. projekts</a>
+    <a href="./05.html">5. projekts</a>
+    <a href="./06.html">6. projekts</a>
+    <a href="./07.html">7. projekts</a>
+    <a href="./08.html">8. projekts</a>
+    <a href="./09.html">9. projekts</a>
+    <a href="./10.html">10. projekts</a>
+    <a href="./11.html">11. projekts</a>
+    <a href="./12.html">12. projekts</a>
+    <a href="./13.html">13. projekts</a>
+    <a href="./14.html">14. projekts</a>
+<script>
+let canvas = document.getElementById("myCanvas");
+let ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "#00ff99";
+ctx.fillRect(0, 0, 400, 400);
+
+
+let x1 = Math.random() * 400;
+let y1 = Math.random() * 400;
+let r1 = Math.random() * 25;
+
+let x2 = Math.random() * 400;
+let y2 = Math.random() * 400;
+let r2 = Math.random() * 25;
+
+let x3 = Math.random() * 400;
+let y3 = Math.random() * 400;
+let r3 = Math.random() * 25;
+
+let x4 = Math.random() * 400;
+let y4 = Math.random() * 400;
+let r4 = Math.random() * 25;
+
+//cetrsturis
+ctx.moveTo(150,150);
+ctx.lineTo(200,150);
+ctx.stroke();
+ctx.lineTo(200,200);
+ctx.stroke();
+ctx.lineTo(150,200);
+ctx.stroke();
+ctx.lineTo(150,150);
+ctx.stroke();
+
+//cetrsturim rokas
+ctx.moveTo(150,150);
+ctx.lineTo(x1,y1);
+ctx.stroke();
+
+ctx.moveTo(200,150);
+ctx.lineTo(x2,y2);
+ctx.stroke();
+
+ctx.moveTo(150,200);
+ctx.lineTo(x4,y4);
+ctx.stroke();
+
+ctx.moveTo(200,200);
+ctx.lineTo(x4,y4);
+ctx.stroke();
+
+
+
+//aplishi
+ctx.beginPath();
+ctx.arc(x1,y1,r1,0,2*Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(x2,y2,r2,0,2*Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(x3,y3,r3,0,2*Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(x4,y4,r4,0,2*Math.PI);
+ctx.stroke();
+
+
+//figura
+ctx.moveTo(x1,y1);
+ctx.lineTo(x2,y2);
+ctx.stroke();
+
+ctx.lineTo(x3,y3);
+ctx.stroke();
+
+ctx.lineTo(x4,y4);
+ctx.stroke();
+
+ctx.lineTo(x1,y1);
+ctx.stroke();
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+    <meta http-equiv="refresh" content="5" >
+<body>
+
+<canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<br>
+    <h2>index</h2>
+    <a href="./01.html">1. projekts</a>
+    <a href="./02.html">2. projekts</a>
+    <a href="./03.html">3. projekts</a>
+    <a href="./04.html">4. projekts</a>
+    <a href="./05.html">5. projekts</a>
+    <a href="./06.html">6. projekts</a>
+    <a href="./07.html">7. projekts</a>
+    <a href="./08.html">8. projekts</a>
+    <a href="./09.html">9. projekts</a>
+    <a href="./10.html">10. projekts</a>
+    <a href="./11.html">11. projekts</a>
+    <a href="./12.html">12. projekts</a>
+    <a href="./13.html">13. projekts</a>
+    <a href="./14.html">14. projekts</a>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#ffff66";
+ctx.fillRect(0, 0, 300, 300);
+
+
+//1 
+let x1 = 100;
+let y1 = 100;
+//2
+let x2 = 200;
+let y2 = 100;
+//3
+let x3 = 200;
+let y3 = 200;
+//4
+let x4 = 100;
+let y4 = 200;
+
+let xr = Math.random() * 300;
+let yr = Math.random() * 300;
+
+
+ctx.beginPath();
+ctx.arc(xr, yr, 25, 0, 2 * Math.PI);
+ctx.stroke();
+
+ctx.moveTo(x1,y1);
+ctx.lineTo(x2,y2);
+ctx.stroke();
+ctx.lineTo(x3,y3);
+ctx.stroke();
+ctx.lineTo(x4,y4);
+ctx.stroke();
+ctx.lineTo(x1,y1);
+ctx.stroke();
+
+ctx.moveTo(x1,y1);
+ctx.lineTo(xr,yr);
+ctx.stroke();
+
+ctx.moveTo(x2,y2);
+ctx.lineTo(xr,yr);
+ctx.stroke();
+
+ctx.moveTo(x3,y3);
+ctx.lineTo(xr,yr);
+ctx.stroke();
+
+ctx.moveTo(x4,y4);
+ctx.lineTo(xr,yr);
+ctx.stroke();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog Bar</title>
+<style>
+    canvas{
+        border: 1px solid black;
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+    <canvas></canvas>
+<br>
+    <h2>index</h2>
+    <a href="./01.html">1. projekts</a>
+    <a href="./02.html">2. projekts</a>
+    <a href="./03.html">3. projekts</a>
+    <a href="./04.html">4. projekts</a>
+    <a href="./05.html">5. projekts</a>
+    <a href="./06.html">6. projekts</a>
+    <a href="./07.html">7. projekts</a>
+    <a href="./08.html">8. projekts</a>
+    <a href="./09.html">9. projekts</a>
+    <a href="./10.html">10. projekts</a>
+    <a href="./11.html">11. projekts</a>
+    <a href="./12.html">12. projekts</a>
+    <a href="./13.html">13. projekts</a>
+    <a href="./14.html">14. projekts</a>
+    <script>
+const canvas = document.querySelector('canvas')
+canvas.width = 300
+canvas.height = 100
+const c = canvas.getContext('2d')
+
+//window location
+let xwindow = 0
+let ywindow = 0
+
+//progressBar
+let x = xwindow + 20 //starting x point
+let y = ywindow + 60 //starting y point
+let barLenght = 0
+let barHeight = 10
+
+let maxLength = 260
+let progressSpeed = 0.5
+
+
+function funnyProgress(){
+ requestAnimationFrame(funnyProgress)
+
+//windowBlue
+c.fillStyle = "blue"
+c.fillRect(xwindow,ywindow,300,100)
+
+//window fill grey
+c.fillStyle = "grey"
+c.fillRect(xwindow + 10, ywindow + 40, 280, 50 )
+
+//progress frame
+c.strokeStyle = "black"
+c.strokeRect(x, y, maxLength, 10)
+
+//----------PROGRESS-BAR----------------
+c.fillStyle = "blue"
+c.fillRect(x,y,barLenght,barHeight)
+
+if(barLenght >= maxLength){progressSpeed = 0}
+barLenght += progressSpeed
+
+let barLenghtPercentage = Math.round(barLenght / maxLength * 100)
+
+//Computing text
+c.fillStyle = "white"
+c.font = "20px Courier New "
+showText = "Computing..." + barLenghtPercentage + "%"
+c.fillText(showText, xwindow + 10, ywindow + 20)
+
+}
+funnyProgress()
+
+
+
+
+
+
+
+
+    
+    </script>
+</body>
+</html>
